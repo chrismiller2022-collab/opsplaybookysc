@@ -27,7 +27,9 @@ dash.calc('kpis', {
     const median = medianOf(fr);
     const res = requests.filter(r => r.hours_to_resolve !== '');
     const onTime = res.length ? res.filter(r => Number(r.hours_to_resolve) <= 48).length / res.length : null;
-    const due14 = deadlines.filter(d => { const x = Date.parse(d.due + 'T23:59:00Z'); return x >= now && x - now <= 14 * DAY; }).length;
+    // Count by calendar day, as the deadlines table does: due today through today + 14.
+    const today = Date.parse(new Date(now).toISOString().slice(0, 10) + 'T00:00:00Z');
+    const due14 = deadlines.filter(d => { const left = (Date.parse(d.due + 'T00:00:00Z') - today) / DAY; return left >= 0 && left <= 14; }).length;
     const takeaway = overdue > 0
       ? `${overdue} request${overdue === 1 ? '' : 's'} open more than 2 days: clear ${overdue === 1 ? 'it' : 'them'} first, then the ${due14} deadlines due in the next two weeks.`
       : `Nothing overdue; focus on the ${due14} deadlines due in the next two weeks.`;
