@@ -1,0 +1,340 @@
+<style>
+#dash-root .cc { font-family: var(--font-anthropic-sans); display: flex; flex-direction: column; gap: var(--cds-gap-lg); }
+#dash-root .cc h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; }
+#dash-root .cc .lede { color: var(--color-fg-muted); font-size: var(--cds-font-size-body); margin: var(--cds-gap-xs) 0 0; }
+#dash-root .cc .note { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); margin: 2px 0 var(--cds-gap-sm); }
+#dash-root .cc .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); gap: var(--cds-gap-md); }
+#dash-root .cc .card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); position: relative; min-width: 0; }
+#dash-root .cc .tile .lbl { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+#dash-root .cc .tile .num { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; margin-top: var(--cds-gap-xs); }
+#dash-root .cc .tile .sub { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin-top: 2px; }
+#dash-root .cc .bad { color: var(--color-bad); }
+#dash-root .cc .ok { color: var(--color-ok); }
+#dash-root .cc .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
+#dash-root .cc h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+#dash-root .cc .chart { min-height: 220px; }
+#dash-root .cc table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+#dash-root .cc th { text-align: left; color: var(--color-fg-muted); font-weight: var(--cds-font-weight-medium); padding: 6px 8px; border-bottom: 1px solid var(--color-border-line); }
+#dash-root .cc td { padding: 6px 8px; border-bottom: 1px solid var(--color-border-line); }
+#dash-root .cc td.r, #dash-root .cc th.r { text-align: right; }
+#dash-root .cc .scroll { overflow-x: auto; }
+#dash-root .cc .tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); display: none; white-space: nowrap; }
+#dash-root .cc .tip .d { color: var(--cds-text-secondary); }
+#dash-root .cc .fail { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 120px; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+#dash-root .cc .fail i { width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); display: inline-block; }
+#dash-root [data-dash-source-state=empty] { color: transparent; }
+#dash-root [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+</style>
+
+<div class="cc">
+  <header>
+    <h1 id="title">Client command center</h1>
+    <p class="lede" id="takeaway" data-source="kpis" data-field="takeaway" data-row="0"><span class="dash-skeleton">—</span></p>
+    <p class="note">Demo with invented data for five fictional clubs, as of Oct 13, 2026, 5:00 pm. Every call, email, voicemail and DM is one row in the request log.</p>
+  </header>
+
+  <section class="tiles" id="kpis">
+    <div class="card tile"><div class="lbl">Open requests</div><div class="num dash-skeleton" data-source="kpis" data-field="open" data-row="0">—</div><div class="sub">All clients</div></div>
+    <div class="card tile"><div class="lbl">Overdue (open over 2 days)</div><div class="num dash-skeleton" id="overdue" data-source="kpis" data-field="overdue" data-row="0">—</div><div class="sub">Target: 0</div></div>
+    <div class="card tile"><div class="lbl">Median first response</div><div class="num dash-skeleton" data-source="kpis" data-field="median_first_hours" data-row="0">—</div><div class="sub">Hours · target under 4</div></div>
+    <div class="card tile"><div class="lbl">Resolved within 2 days</div><div class="num dash-skeleton" id="ontime" data-source="kpis" data-field="resolved_on_time" data-row="0">—</div><div class="sub">Since Aug 31 · target 95%</div></div>
+    <div class="card tile"><div class="lbl">Deadlines in next 14 days</div><div class="num dash-skeleton" data-source="kpis" data-field="due_14_days" data-row="0">—</div><div class="sub">Across all clients</div></div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2 id="h-deadlines">Upcoming deadlines</h2>
+      <p class="note">Soonest first; red means due within 3 days.</p>
+      <div class="scroll"><table id="deadlines" data-source="deadline_days" data-row-key="task">
+        <thead><tr><th data-field="due">Due</th><th data-field="days_left" class="r">Days left</th><th data-field="client">Client</th><th data-field="task">Task</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </div>
+    <div class="card">
+      <h2 id="h-health">Client health</h2>
+      <p class="note">Open work, response speed and registration pace by client.</p>
+      <div class="scroll"><table id="health" data-source="client_health" data-row-key="client">
+        <thead><tr><th data-field="client">Client</th><th data-field="platform">Platform</th><th data-field="open" class="r">Open</th><th data-field="overdue" class="r">Overdue</th><th data-field="median_first_hours" class="r">1st reply (h)</th><th data-field="reg_pace" class="r">Reg. vs last yr</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2 id="h-weekly">Requests per week</h2>
+      <p class="note">All clients, by week starting Monday; the current week is partial.</p>
+      <div class="chart" id="weekly" data-source="weekly"></div>
+    </div>
+    <div class="card">
+      <h2 id="h-pace">Registration pace vs last season</h2>
+      <p class="note">Registrations at week 6 of the window as a share of last season at the same point; line marks 100%.</p>
+      <div class="chart" id="pace" data-source="client_health"></div>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2 id="h-cat">What families ask about</h2>
+      <p class="note">Requests by category since Aug 31; tells you which reply templates to write first.</p>
+      <div class="chart" id="cats" data-source="by_category"></div>
+    </div>
+    <div class="card">
+      <h2 id="h-chan">Where requests come in</h2>
+      <p class="note">Requests by channel since Aug 31; every channel lands in the same queue.</p>
+      <div class="chart" id="chans" data-source="by_channel"></div>
+    </div>
+  </section>
+</div>
+
+<script>
+const NOW_ISO = '2026-10-13T17:00:00Z';
+
+dash.calc('kpis', {
+  title: 'Headline numbers',
+  description: 'Open and overdue requests, median first reply, share resolved within 48 hours, and deadlines due in the next 14 days, as of Oct 13, 2026 5 pm.',
+  inputs: ['requests', 'deadlines'],
+  fn: (requests, deadlines) => {
+    const now = Date.parse('2026-10-13T17:00:00Z');
+    const t = s => Date.parse(String(s).replace(' ', 'T') + ':00Z');
+    const open = requests.filter(r => r.status === 'Open');
+    const overdue = open.filter(r => now - t(r.received) > 48 * 3600e3).length;
+    const fr = requests.filter(r => r.hours_to_first_response !== '').map(r => Number(r.hours_to_first_response)).sort((a, b) => a - b);
+    const mid = Math.floor(fr.length / 2);
+    const median = fr.length % 2 ? fr[mid] : (fr[mid - 1] + fr[mid]) / 2;
+    const res = requests.filter(r => r.hours_to_resolve !== '');
+    const onTime = res.filter(r => Number(r.hours_to_resolve) <= 48).length / res.length;
+    const due14 = deadlines.filter(d => { const x = Date.parse(d.due + 'T23:59:00Z'); return x >= now && x - now <= 14 * 864e5; }).length;
+    const takeaway = overdue > 0
+      ? `${overdue} request${overdue === 1 ? '' : 's'} open more than 2 days: clear ${overdue === 1 ? 'it' : 'them'} first, then the ${due14} deadlines due in the next two weeks.`
+      : `Nothing overdue; focus on the ${due14} deadlines due in the next two weeks.`;
+    return [{ open: open.length, overdue, median_first_hours: Math.round(median * 10) / 10, resolved_on_time: Math.round(onTime * 1000) / 1000, due_14_days: due14, takeaway }];
+  }
+});
+
+dash.calc('deadline_days', {
+  title: 'Deadlines with days left',
+  description: 'Each upcoming deadline with days remaining from Oct 13, 2026.',
+  inputs: ['deadlines'],
+  fn: (deadlines) => {
+    const today = Date.parse('2026-10-13T00:00:00Z');
+    return deadlines.map(d => ({ task: d.task, client: d.client, due: d.due, days_left: Math.round((Date.parse(d.due + 'T00:00:00Z') - today) / 864e5) }))
+      .filter(d => d.days_left >= 0).sort((a, b) => a.days_left - b.days_left);
+  }
+});
+
+dash.calc('client_health', {
+  title: 'Client health',
+  description: 'Per client: open and overdue requests, median hours to first reply, and registrations this season vs last season at the latest week with data.',
+  inputs: ['requests', 'clients', 'registrations'],
+  fn: (requests, clients, registrations) => {
+    const now = Date.parse('2026-10-13T17:00:00Z');
+    const t = s => Date.parse(String(s).replace(' ', 'T') + ':00Z');
+    return clients.map(c => {
+      const mine = requests.filter(r => r.client === c.client);
+      const open = mine.filter(r => r.status === 'Open');
+      const fr = mine.filter(r => r.hours_to_first_response !== '').map(r => Number(r.hours_to_first_response)).sort((a, b) => a - b);
+      const m = Math.floor(fr.length / 2);
+      const median = fr.length ? (fr.length % 2 ? fr[m] : (fr[m - 1] + fr[m]) / 2) : null;
+      const regs = registrations.filter(r => r.client === c.client && r.this_season !== '').sort((a, b) => Number(b.week_of_registration) - Number(a.week_of_registration));
+      const latest = regs[0];
+      return {
+        client: c.client, platform: c.platform,
+        open: open.length,
+        overdue: open.filter(r => now - t(r.received) > 48 * 3600e3).length,
+        median_first_hours: median === null ? null : Math.round(median * 10) / 10,
+        reg_pace: latest ? Math.round(Number(latest.this_season) / Number(latest.last_season) * 1000) / 1000 : null
+      };
+    });
+  }
+});
+
+dash.calc('weekly', {
+  title: 'Requests per week',
+  description: 'Count of requests received per week, weeks starting Monday.',
+  inputs: ['requests'],
+  fn: (requests) => {
+    const counts = {};
+    requests.forEach(r => {
+      const d = Date.parse(r.received.slice(0, 10) + 'T00:00:00Z');
+      const dow = (new Date(d).getUTCDay() + 6) % 7;
+      const wk = new Date(d - dow * 864e5).toISOString().slice(0, 10);
+      counts[wk] = (counts[wk] || 0) + 1;
+    });
+    return Object.keys(counts).sort().map(week => ({ week, requests: counts[week] }));
+  }
+});
+
+dash.calc('by_category', {
+  title: 'Requests by category',
+  description: 'Count of requests per category since Aug 31, 2026.',
+  inputs: ['requests'],
+  fn: (requests) => {
+    const c = {};
+    requests.forEach(r => { c[r.category] = (c[r.category] || 0) + 1; });
+    return Object.keys(c).map(category => ({ category, requests: c[category] })).sort((a, b) => b.requests - a.requests);
+  }
+});
+
+dash.calc('by_channel', {
+  title: 'Requests by channel',
+  description: 'Count of requests per intake channel since Aug 31, 2026.',
+  inputs: ['requests'],
+  fn: (requests) => {
+    const c = {};
+    requests.forEach(r => { c[r.channel] = (c[r.channel] || 0) + 1; });
+    return Object.keys(c).map(channel => ({ channel, requests: c[channel] })).sort((a, b) => b.requests - a.requests);
+  }
+});
+
+(() => {
+  const root = document.getElementById('dash-root');
+  const fmtInt = d3.format(',');
+  const fmtPct = d3.format('.0%');
+  const fmtDay = d => d3.utcFormat('%b %-d')(new Date(d + 'T00:00:00Z'));
+
+  const failLine = el => { el.innerHTML = ''; const w = document.createElement('div'); w.className = 'fail'; const i = document.createElement('i'); w.appendChild(i); w.appendChild(document.createTextNode('Failed to load')); el.appendChild(w); };
+
+  const tip = (box) => {
+    let t = box.querySelector('.tip');
+    if (!t) { t = document.createElement('div'); t.className = 'tip'; box.appendChild(t); }
+    return t;
+  };
+  const showTip = (box, t, ev, label, value) => {
+    t.innerHTML = '';
+    const a = document.createElement('div'); a.className = 'd'; a.textContent = label; t.appendChild(a);
+    const b = document.createElement('div'); b.textContent = value; t.appendChild(b);
+    t.style.display = 'block';
+    const r = box.getBoundingClientRect();
+    let x = ev.clientX - r.left + 12, y = ev.clientY - r.top - 10;
+    x = Math.min(x, r.width - t.offsetWidth - 4);
+    t.style.left = Math.max(4, x) + 'px'; t.style.top = y + 'px';
+  };
+
+  const hbars = (el, rows, keyCol, valCol, color, fmt, refLine) => {
+    d3.select(el).selectAll('svg').remove();
+    const W = Math.max(280, el.clientWidth);
+    const rowH = 30;
+    const svg = d3.select(el).append('svg').attr('width', '100%');
+    const probe = svg.append('text').attr('font-size', 12);
+    let lw = 0; rows.forEach(r => { probe.text(r[keyCol]); lw = Math.max(lw, probe.node().getComputedTextLength()); });
+    probe.text(fmt(d3.max(rows, r => r[valCol]) || 0)); const vw = probe.node().getComputedTextLength();
+    probe.remove();
+    const m = { l: lw + 12, r: vw + 14, t: 6, b: 6 };
+    const H = m.t + m.b + rows.length * rowH;
+    svg.attr('viewBox', `0 0 ${W} ${H}`);
+    const maxV = Math.max(d3.max(rows, r => r[valCol]) || 0, refLine || 0);
+    const x = d3.scaleLinear([0, maxV * 1.02], [m.l, W - m.r]);
+    const y = d3.scaleBand(rows.map(r => r[keyCol]), [m.t, H - m.b]).padding(0.3);
+    const t = tip(el);
+    rows.forEach(r => {
+      const g = svg.append('g');
+      g.append('text').attr('x', m.l - 8).attr('y', y(r[keyCol]) + y.bandwidth() / 2 + 4).attr('text-anchor', 'end').attr('font-size', 12).attr('fill', 'var(--color-fg)').text(r[keyCol]);
+      const c = typeof color === 'function' ? color(r) : color;
+      g.append('rect').attr('x', m.l).attr('y', y(r[keyCol])).attr('height', Math.min(y.bandwidth(), 22)).attr('width', Math.max(2, x(r[valCol]) - m.l)).attr('rx', 4).attr('fill', c)
+        .on('mousemove', ev => showTip(el, t, ev, r[keyCol], fmt(r[valCol]))).on('mouseleave', () => { t.style.display = 'none'; });
+      g.append('text').attr('x', x(r[valCol]) + 6).attr('y', y(r[keyCol]) + y.bandwidth() / 2 + 4).attr('font-size', 12).attr('fill', 'var(--color-fg-muted)').text(fmt(r[valCol]));
+    });
+    if (refLine) svg.append('line').attr('x1', x(refLine)).attr('x2', x(refLine)).attr('y1', m.t - 2).attr('y2', H - m.b + 2).attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 3');
+    el.style.minHeight = H + 'px';
+  };
+
+  dash.onData(() => {
+    // KPIs
+    const k = dash.data('kpis');
+    const tiles = root.querySelectorAll('#kpis .num');
+    const take = document.getElementById('takeaway');
+    if (k.status === 'ok' && k.data.length) {
+      const r = k.data[0];
+      tiles.forEach(n => n.classList.remove('dash-skeleton'));
+      tiles[0].textContent = fmtInt(r.open);
+      tiles[1].textContent = fmtInt(r.overdue);
+      tiles[1].classList.toggle('bad', r.overdue > 0);
+      tiles[2].textContent = d3.format('.1f')(r.median_first_hours);
+      tiles[2].classList.toggle('ok', r.median_first_hours < 4);
+      tiles[3].textContent = d3.format('.1%')(r.resolved_on_time);
+      tiles[3].classList.toggle('bad', r.resolved_on_time < 0.95);
+      tiles[4].textContent = fmtInt(r.due_14_days);
+      take.textContent = r.takeaway;
+    } else if (k.status !== 'loading') {
+      tiles.forEach(n => { n.classList.remove('dash-skeleton'); n.textContent = '—'; });
+      take.textContent = '—';
+    }
+
+    // Deadlines table
+    const dl = dash.data('deadline_days');
+    const dBody = document.querySelector('#deadlines tbody');
+    dBody.innerHTML = '';
+    if (dl.status === 'ok') {
+      dl.data.forEach(r => {
+        const tr = document.createElement('tr');
+        const cells = [fmtDay(r.due), String(r.days_left), r.client, r.task];
+        cells.forEach((v, i) => { const td = document.createElement('td'); td.textContent = v; if (i === 1) { td.className = 'r'; if (r.days_left <= 3) td.classList.add('bad'); } tr.appendChild(td); });
+        dBody.appendChild(tr);
+      });
+    }
+
+    // Health table
+    const h = dash.data('client_health');
+    const hBody = document.querySelector('#health tbody');
+    hBody.innerHTML = '';
+    if (h.status === 'ok') {
+      h.data.forEach(r => {
+        const tr = document.createElement('tr');
+        const cells = [r.client, r.platform, fmtInt(r.open), fmtInt(r.overdue), r.median_first_hours === null ? '—' : d3.format('.1f')(r.median_first_hours), r.reg_pace === null ? '—' : fmtPct(r.reg_pace)];
+        cells.forEach((v, i) => {
+          const td = document.createElement('td'); td.textContent = v;
+          if (i >= 2) td.className = 'r';
+          if (i === 3 && r.overdue > 0) td.classList.add('bad');
+          if (i === 5 && r.reg_pace !== null) td.classList.add(r.reg_pace < 0.95 ? 'bad' : 'ok');
+          tr.appendChild(td);
+        });
+        hBody.appendChild(tr);
+      });
+    }
+
+    // Weekly bars
+    const wEl = document.getElementById('weekly');
+    const w = dash.data('weekly');
+    d3.select(wEl).selectAll('svg,.fail').remove();
+    if (w.status === 'ok' && w.data.length) {
+      const rows = w.data;
+      const W = Math.max(280, wEl.clientWidth), H = 220, m = { l: 34, r: 8, t: 10, b: 26 };
+      const svg = d3.select(wEl).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+      const x = d3.scaleBand(rows.map(r => r.week), [m.l, W - m.r]).padding(0.25);
+      const y = d3.scaleLinear([0, d3.max(rows, r => r.requests) * 1.1], [H - m.b, m.t]);
+      svg.append('g').selectAll('line').data(y.ticks(4)).join('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', d => y(d)).attr('y2', d => y(d)).attr('stroke', 'var(--cds-chart-grid)');
+      svg.append('g').selectAll('text').data(y.ticks(4)).join('text').attr('x', m.l - 6).attr('y', d => y(d) + 4).attr('text-anchor', 'end').attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').text(d => d);
+      const t = tip(wEl);
+      const last = rows.at(-1).week;
+      svg.append('g').selectAll('rect').data(rows).join('rect')
+        .attr('x', r => x(r.week) + Math.max(0, (x.bandwidth() - 32) / 2)).attr('width', Math.min(32, x.bandwidth()))
+        .attr('y', r => y(r.requests)).attr('height', r => y(0) - y(r.requests)).attr('rx', 4)
+        .attr('fill', r => r.week === last ? 'var(--cds-chart-muted)' : dash.colors[0])
+        .on('mousemove', (ev, r) => showTip(wEl, t, ev, 'Week of ' + fmtDay(r.week) + (r.week === last ? ' (partial)' : ''), fmtInt(r.requests) + ' requests'))
+        .on('mouseleave', () => { t.style.display = 'none'; });
+      const every = Math.ceil(rows.length / Math.max(1, Math.floor((W - m.l) / 56)));
+      svg.append('g').selectAll('text').data(rows.filter((_, i) => i % every === 0)).join('text')
+        .attr('x', r => x(r.week) + x.bandwidth() / 2).attr('y', H - 8).attr('text-anchor', 'middle').attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').text(r => fmtDay(r.week));
+      svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(0)).attr('y2', y(0)).attr('stroke', 'var(--cds-chart-axis)');
+    } else if (w.status === 'error') failLine(wEl);
+
+    // Pace bars
+    const pEl = document.getElementById('pace');
+    d3.select(pEl).selectAll('svg,.fail').remove();
+    if (h.status === 'ok') {
+      const rows = h.data.filter(r => r.reg_pace !== null).slice().sort((a, b) => a.reg_pace - b.reg_pace);
+      hbars(pEl, rows, 'client', 'reg_pace', r => r.reg_pace < 0.95 ? 'var(--cds-chart-status-critical)' : dash.colors[0], fmtPct, 1);
+    } else if (h.status === 'error') failLine(pEl);
+
+    // Categories and channels
+    [['cats', 'by_category', 'category'], ['chans', 'by_channel', 'channel']].forEach(([id, src, key]) => {
+      const el = document.getElementById(id);
+      const d = dash.data(src);
+      d3.select(el).selectAll('svg,.fail').remove();
+      if (d.status === 'ok') hbars(el, d.data, key, 'requests', dash.colors[0], fmtInt, null);
+      else if (d.status === 'error') failLine(el);
+    });
+  });
+})();
+</script>

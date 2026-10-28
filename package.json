@@ -1,0 +1,12 @@
+{
+  "name": "sports-office-prep",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "dev": "node scripts/build-site.mjs && npx --yes serve public"
+  },
+  "devDependencies": {
+    "marked": "^14.1.4"
+  }
+}

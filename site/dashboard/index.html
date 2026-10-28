@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Client Command Center</title>
+<meta name="description" content="Multi-client operations dashboard for a virtual sports front office: request queue, deadlines, response times and registration pace.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+.cc { display: flex; flex-direction: column; gap: 20px; }
+.cc .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); gap: 14px; }
+.cc .tile .lbl { font-size: 13px; color: var(--color-fg-muted); }
+.cc .tile .num { font-family: var(--font-serif); font-size: 2rem; font-variant-numeric: tabular-nums; margin-top: 4px; }
+.cc .tile .sub { font-size: 12px; color: var(--color-fg-muted); margin-top: 2px; }
+.cc .bad { color: var(--color-bad); }
+.cc .ok { color: var(--color-ok); }
+.cc .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 14px; }
+.cc h2 { font-size: 1.05rem; font-weight: 600; margin: 0; }
+.cc .card { position: relative; }
+.cc .card .note { margin: 2px 0 10px; }
+.cc .chart { min-height: 220px; position: relative; }
+.cc table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+.cc th { text-align: left; color: var(--color-fg-muted); font-weight: 500; padding: 6px 8px; border-bottom: 1px solid var(--color-border-line); }
+.cc td { padding: 6px 8px; border-bottom: 1px solid var(--color-border-line); }
+.cc td.r, .cc th.r { text-align: right; }
+.cc .scroll { overflow-x: auto; max-height: 420px; overflow-y: auto; }
+.cc .tip { position: absolute; pointer-events: none; background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: 8px; box-shadow: var(--shadow-pop); padding: 6px 10px; font-size: 12px; display: none; white-space: nowrap; z-index: 2; }
+.cc .tip .d { color: var(--color-fg-muted); }
+.cc .fail { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 120px; color: var(--color-fg-muted); font-size: 13px; text-align: center; }
+.cc .fail i { width: 6px; height: 6px; border-radius: 50%; background: var(--color-bad); display: inline-block; flex: none; }
+.sources { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; font-size: 13px; }
+.sources .btn { font: inherit; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--color-border-line); background: var(--color-panel); color: var(--color-fg); cursor: pointer; }
+.sources .btn:hover { border-color: var(--color-fg-muted); }
+.sources input[type=file] { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.sources details { flex-basis: 100%; color: var(--color-fg-muted); }
+.sources details code { font-size: 12px; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="/">Sports Office Admin Prep</a>
+  <a href="/dashboard/" aria-current="page">Command Center</a>
+  <a href="/playbook/">Operations Playbook</a>
+  <a href="/learning-plan/">Platform Learning Plan</a>
+</nav>
+
+<main>
+<div class="cc">
+  <header>
+    <h1 id="title">Client command center</h1>
+    <p class="lede" id="takeaway">Loading…</p>
+    <p class="note" id="asof"></p>
+  </header>
+
+  <section class="card sources" aria-label="Data source">
+    <span id="source-status">Loading demo data…</span>
+    <label class="btn" for="csv-picker">Load your own CSVs</label>
+    <input id="csv-picker" type="file" accept=".csv,text/csv" multiple>
+    <button class="btn" id="use-demo" type="button">Back to demo</button>
+    <details>
+      <summary>CSV format</summary>
+      <p>Pick up to four files named <code>clients.csv</code>, <code>deadlines.csv</code>, <code>registrations.csv</code> and <code>requests.csv</code>. Files are read in your browser and never leave it. Columns used:</p>
+      <ul>
+        <li><code>clients</code>: client, platform</li>
+        <li><code>deadlines</code>: client, task, due (YYYY-MM-DD)</li>
+        <li><code>registrations</code>: client, week_of_registration, this_season, last_season</li>
+        <li><code>requests</code>: client, received (YYYY-MM-DD HH:MM, UTC), channel, category, status (Open or Resolved), hours_to_first_response, hours_to_resolve</li>
+      </ul>
+      <p>The <a href="/data/clients.csv">demo files</a> (<a href="/data/deadlines.csv">deadlines</a>, <a href="/data/registrations.csv">registrations</a>, <a href="/data/requests.csv">requests</a>) work as templates.</p>
+    </details>
+  </section>
+
+  <section class="tiles" id="kpis">
+    <div class="card tile"><div class="lbl">Open requests</div><div class="num">—</div><div class="sub">All clients</div></div>
+    <div class="card tile"><div class="lbl">Overdue (open over 2 days)</div><div class="num">—</div><div class="sub">Target: 0</div></div>
+    <div class="card tile"><div class="lbl">Median first response</div><div class="num">—</div><div class="sub">Hours · target under 4</div></div>
+    <div class="card tile"><div class="lbl">Resolved within 2 days</div><div class="num">—</div><div class="sub">Target 95%</div></div>
+    <div class="card tile"><div class="lbl">Deadlines in next 14 days</div><div class="num">—</div><div class="sub">Across all clients</div></div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>Upcoming deadlines</h2>
+      <p class="note">Soonest first; red means due within 3 days.</p>
+      <div class="scroll"><table id="deadlines">
+        <thead><tr><th>Due</th><th class="r">Days left</th><th>Client</th><th>Task</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </div>
+    <div class="card">
+      <h2>Client health</h2>
+      <p class="note">Open work, response speed and registration pace by client.</p>
+      <div class="scroll"><table id="health">
+        <thead><tr><th>Client</th><th>Platform</th><th class="r">Open</th><th class="r">Overdue</th><th class="r">1st reply (h)</th><th class="r">Reg. vs last yr</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>Requests per week</h2>
+      <p class="note">All clients, by week starting Monday; the current week is partial.</p>
+      <div class="chart" id="weekly"></div>
+    </div>
+    <div class="card">
+      <h2>Registration pace vs last season</h2>
+      <p class="note">Registrations at the latest week of the window as a share of last season at the same point; line marks 100%.</p>
+      <div class="chart" id="pace"></div>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>What families ask about</h2>
+      <p class="note">Requests by category; tells you which reply templates to write first.</p>
+      <div class="chart" id="cats"></div>
+    </div>
+    <div class="card">
+      <h2>Where requests come in</h2>
+      <p class="note">Requests by channel; every channel lands in the same queue.</p>
+      <div class="chart" id="chans"></div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="site-foot">All clubs, people and numbers in the demo are fictional.</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script src="/dashboard/runtime.js"></script>
+<script src="/dashboard/dashboard.js"></script>
+</body>
+</html>

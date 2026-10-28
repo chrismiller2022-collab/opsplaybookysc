@@ -1,0 +1,294 @@
+id,client,channel,category,received,first_response,resolved,status,hours_to_first_response,hours_to_resolve
+R0001,Riverbend YSC,Voicemail,Registration,2026-08-31 11:15,2026-08-31 14:24,2026-08-31 15:16,Resolved,3.2,4.0
+R0002,Riverbend YSC,Email,Registration,2026-08-31 13:02,2026-08-31 14:18,2026-09-01 01:04,Resolved,1.3,12.0
+R0003,Harbor Point Volleyball,Email,Schedule change,2026-08-31 17:44,2026-09-01 08:05,2026-09-01 22:40,Resolved,14.4,28.9
+R0004,Live Oak Baseball League,Email,Payment / refund,2026-08-31 18:27,2026-09-01 10:16,2026-09-02 13:04,Resolved,15.8,42.6
+R0005,Live Oak Baseball League,Social DM,Schedule change,2026-08-31 20:22,2026-09-01 11:17,2026-09-02 06:34,Resolved,14.9,34.2
+R0006,Marsh Hawks Lacrosse,Phone,General question,2026-08-31 15:18,2026-08-31 17:28,2026-09-01 19:20,Resolved,2.2,28.0
+R0007,Marsh Hawks Lacrosse,Email,Registration,2026-08-31 07:42,2026-08-31 08:11,2026-09-01 07:08,Resolved,0.5,23.4
+R0008,Tidewater Hoops,Email,Schedule change,2026-08-31 11:29,2026-08-31 13:02,2026-09-01 10:02,Resolved,1.6,22.6
+R0009,Tidewater Hoops,Phone,Registration,2026-08-31 17:41,2026-09-01 07:49,2026-09-01 22:19,Resolved,14.1,28.6
+R0010,Riverbend YSC,Voicemail,Schedule change,2026-09-01 17:44,2026-09-02 10:06,2026-09-03 01:44,Resolved,16.4,32.0
+R0011,Riverbend YSC,Email,Registration,2026-09-01 12:25,2026-09-01 13:29,2026-09-03 06:17,Resolved,1.1,41.9
+R0012,Riverbend YSC,Team app,Payment / refund,2026-09-01 17:31,2026-09-02 07:21,2026-09-03 03:18,Resolved,13.8,33.8
+R0013,Riverbend YSC,Email,Schedule change,2026-09-01 10:47,2026-09-01 11:57,2026-09-01 13:07,Resolved,1.2,2.3
+R0014,Harbor Point Volleyball,Email,Registration,2026-09-01 15:31,2026-09-02 00:49,2026-09-03 06:00,Resolved,9.3,38.5
+R0015,Harbor Point Volleyball,Email,Registration,2026-09-01 13:38,2026-09-01 17:55,2026-09-03 01:05,Resolved,4.3,35.5
+R0016,Live Oak Baseball League,Email,Uniforms,2026-09-01 20:00,2026-09-02 11:32,2026-09-03 01:40,Resolved,15.5,29.7
+R0017,Live Oak Baseball League,Email,Registration,2026-09-01 11:27,2026-09-01 12:22,2026-09-01 22:28,Resolved,0.9,11.0
+R0018,Tidewater Hoops,Social DM,Schedule change,2026-09-01 08:55,2026-09-01 09:02,2026-09-01 13:43,Resolved,0.1,4.8
+R0019,Tidewater Hoops,Team app,Complaint,2026-09-01 09:34,2026-09-01 12:00,2026-09-03 10:29,Resolved,2.4,48.9
+R0020,Riverbend YSC,Team app,Payment / refund,2026-09-02 08:59,2026-09-02 12:00,2026-09-03 08:17,Resolved,3.0,23.3
+R0021,Riverbend YSC,Email,Registration,2026-09-02 16:05,2026-09-02 21:39,2026-09-03 21:37,Resolved,5.6,29.5
+R0022,Harbor Point Volleyball,Social DM,Registration,2026-09-02 15:10,2026-09-02 19:18,2026-09-03 00:45,Resolved,4.1,9.6
+R0023,Harbor Point Volleyball,Email,Registration,2026-09-02 18:44,2026-09-03 10:42,2026-09-04 05:11,Resolved,16.0,34.5
+R0024,Live Oak Baseball League,Email,Registration,2026-09-02 08:15,2026-09-02 11:39,2026-09-02 17:03,Resolved,3.4,8.8
+R0025,Tidewater Hoops,Social DM,General question,2026-09-02 10:04,2026-09-02 13:47,2026-09-03 13:06,Resolved,3.7,27.0
+R0026,Tidewater Hoops,Team app,Registration,2026-09-02 10:34,2026-09-02 13:42,2026-09-02 13:59,Resolved,3.1,3.4
+R0027,Tidewater Hoops,Email,Registration,2026-09-02 19:26,2026-09-03 09:09,2026-09-03 16:19,Resolved,13.7,20.9
+R0028,Riverbend YSC,Email,Complaint,2026-09-03 17:41,2026-09-04 07:17,2026-09-05 17:56,Resolved,13.6,48.3
+R0029,Harbor Point Volleyball,Email,Payment / refund,2026-09-03 10:34,2026-09-03 11:54,2026-09-04 16:01,Resolved,1.3,29.5
+R0030,Harbor Point Volleyball,Phone,General question,2026-09-03 14:51,2026-09-03 18:50,2026-09-06 11:26,Resolved,4.0,68.6
+R0031,Live Oak Baseball League,Email,Sponsor,2026-09-03 08:59,2026-09-03 09:34,2026-09-04 08:28,Resolved,0.6,23.5
+R0032,Live Oak Baseball League,Team app,Payment / refund,2026-09-03 07:10,2026-09-03 09:19,2026-09-05 15:44,Resolved,2.2,56.6
+R0033,Live Oak Baseball League,Team app,Complaint,2026-09-03 13:44,2026-09-03 14:13,2026-09-04 12:34,Resolved,0.5,22.8
+R0034,Live Oak Baseball League,Phone,Complaint,2026-09-03 11:13,2026-09-03 11:55,2026-09-04 11:49,Resolved,0.7,24.6
+R0035,Tidewater Hoops,Team app,Registration,2026-09-03 20:33,2026-09-04 08:52,2026-09-05 06:15,Resolved,12.3,33.7
+R0036,Riverbend YSC,Team app,Registration,2026-09-04 10:25,2026-09-04 12:58,2026-09-05 21:47,Resolved,2.6,35.4
+R0037,Riverbend YSC,Phone,Schedule change,2026-09-04 13:42,2026-09-04 17:26,2026-09-05 03:39,Resolved,3.7,14.0
+R0038,Riverbend YSC,Phone,Payment / refund,2026-09-04 10:16,2026-09-04 12:13,2026-09-06 05:50,Resolved,2.0,43.6
+R0039,Riverbend YSC,Team app,Payment / refund,2026-09-04 08:00,2026-09-04 11:16,2026-09-05 17:08,Resolved,3.3,33.1
+R0040,Harbor Point Volleyball,Email,Registration,2026-09-04 08:56,2026-09-04 16:03,2026-09-04 18:17,Resolved,7.1,9.4
+R0041,Live Oak Baseball League,Phone,Schedule change,2026-09-04 19:41,2026-09-05 09:54,2026-09-06 05:51,Resolved,14.2,34.2
+R0042,Live Oak Baseball League,Voicemail,General question,2026-09-04 11:07,2026-09-04 14:13,2026-09-05 10:36,Resolved,3.1,23.5
+R0043,Live Oak Baseball League,Social DM,Uniforms,2026-09-04 12:13,2026-09-04 16:03,2026-09-04 19:25,Resolved,3.8,7.2
+R0044,Marsh Hawks Lacrosse,Social DM,Schedule change,2026-09-04 07:05,2026-09-04 11:18,2026-09-05 04:45,Resolved,4.2,21.7
+R0045,Tidewater Hoops,Phone,Uniforms,2026-09-04 14:35,2026-09-04 16:55,2026-09-06 08:39,Resolved,2.3,42.1
+R0046,Tidewater Hoops,Email,Registration,2026-09-04 09:34,2026-09-04 15:10,2026-09-04 15:13,Resolved,5.6,5.7
+R0047,Riverbend YSC,Team app,General question,2026-09-07 12:57,2026-09-07 17:16,2026-09-08 10:32,Resolved,4.3,21.6
+R0048,Riverbend YSC,Phone,Payment / refund,2026-09-07 17:06,2026-09-08 08:35,2026-09-10 13:34,Resolved,15.5,68.5
+R0049,Harbor Point Volleyball,Social DM,Registration,2026-09-07 10:55,2026-09-07 14:19,2026-09-08 17:16,Resolved,3.4,30.4
+R0050,Live Oak Baseball League,Voicemail,Uniforms,2026-09-07 13:51,2026-09-07 15:45,2026-09-08 05:50,Resolved,1.9,16.0
+R0051,Live Oak Baseball League,Email,Registration,2026-09-07 13:55,2026-09-07 17:35,2026-09-08 17:21,Resolved,3.7,27.4
+R0052,Live Oak Baseball League,Email,General question,2026-09-07 20:50,2026-09-08 11:28,2026-09-10 07:15,Resolved,14.6,58.4
+R0053,Live Oak Baseball League,Voicemail,Registration,2026-09-07 11:55,2026-09-07 13:59,2026-09-08 17:26,Resolved,2.1,29.5
+R0054,Marsh Hawks Lacrosse,Email,General question,2026-09-07 07:07,2026-09-07 08:07,2026-09-08 05:12,Resolved,1.0,22.1
+R0055,Riverbend YSC,Team app,Payment / refund,2026-09-08 19:20,2026-09-09 07:47,2026-09-10 06:26,Resolved,12.5,35.1
+R0056,Riverbend YSC,Email,Registration,2026-09-08 10:16,2026-09-08 11:21,2026-09-08 22:11,Resolved,1.1,11.9
+R0057,Harbor Point Volleyball,Team app,Payment / refund,2026-09-08 10:23,2026-09-08 11:41,2026-09-10 10:52,Resolved,1.3,48.5
+R0058,Harbor Point Volleyball,Phone,General question,2026-09-08 08:46,2026-09-08 09:55,2026-09-08 17:43,Resolved,1.2,9.0
+R0059,Harbor Point Volleyball,Phone,Registration,2026-09-08 15:08,2026-09-08 16:05,2026-09-08 18:57,Resolved,1.0,3.8
+R0060,Live Oak Baseball League,Social DM,Payment / refund,2026-09-08 16:19,2026-09-08 18:21,2026-09-10 09:25,Resolved,2.0,41.1
+R0061,Live Oak Baseball League,Email,Payment / refund,2026-09-08 16:41,2026-09-08 18:06,2026-09-09 09:09,Resolved,1.4,16.5
+R0062,Live Oak Baseball League,Email,Registration,2026-09-08 19:47,2026-09-09 09:50,2026-09-09 15:21,Resolved,14.1,19.6
+R0063,Live Oak Baseball League,Email,Uniforms,2026-09-08 19:15,2026-09-09 08:02,2026-09-09 12:39,Resolved,12.8,17.4
+R0064,Marsh Hawks Lacrosse,Email,Registration,2026-09-08 20:49,2026-09-09 11:20,2026-09-10 17:13,Resolved,14.5,44.4
+R0065,Tidewater Hoops,Email,Schedule change,2026-09-08 10:09,2026-09-08 10:26,2026-09-09 00:35,Resolved,0.3,14.4
+R0066,Riverbend YSC,Team app,Registration,2026-09-09 13:14,2026-09-09 15:05,2026-09-10 04:35,Resolved,1.9,15.4
+R0067,Harbor Point Volleyball,Team app,Uniforms,2026-09-09 19:29,2026-09-10 09:51,2026-09-10 11:15,Resolved,14.4,15.8
+R0068,Harbor Point Volleyball,Team app,General question,2026-09-09 14:39,2026-09-09 16:03,2026-09-10 19:36,Resolved,1.4,29.0
+R0069,Live Oak Baseball League,Social DM,Sponsor,2026-09-09 14:16,2026-09-09 20:06,2026-09-10 05:58,Resolved,5.8,15.7
+R0070,Live Oak Baseball League,Voicemail,Payment / refund,2026-09-09 10:17,2026-09-09 17:12,2026-09-11 00:25,Resolved,6.9,38.1
+R0071,Live Oak Baseball League,Email,Registration,2026-09-09 08:08,2026-09-09 12:26,2026-09-10 08:00,Resolved,4.3,23.9
+R0072,Live Oak Baseball League,Email,Schedule change,2026-09-09 12:34,2026-09-09 16:12,2026-09-10 13:07,Resolved,3.6,24.6
+R0073,Tidewater Hoops,Email,Payment / refund,2026-09-09 19:36,2026-09-10 09:00,2026-09-11 14:04,Resolved,13.4,42.5
+R0074,Tidewater Hoops,Email,Complaint,2026-09-09 20:57,2026-09-10 11:56,2026-09-10 23:41,Resolved,15.0,26.7
+R0075,Riverbend YSC,Email,Payment / refund,2026-09-10 10:17,2026-09-10 11:13,2026-09-12 11:19,Resolved,0.9,49.0
+R0076,Riverbend YSC,Email,Schedule change,2026-09-10 09:53,2026-09-10 12:02,2026-09-10 23:46,Resolved,2.2,13.9
+R0077,Harbor Point Volleyball,Email,Registration,2026-09-10 17:27,2026-09-11 05:39,2026-09-11 18:21,Resolved,12.2,24.9
+R0078,Live Oak Baseball League,Voicemail,Payment / refund,2026-09-10 19:56,2026-09-11 12:15,2026-09-13 06:21,Resolved,16.3,58.4
+R0079,Live Oak Baseball League,Phone,Registration,2026-09-10 08:30,2026-09-10 12:51,2026-09-11 02:50,Resolved,4.4,18.3
+R0080,Live Oak Baseball League,Email,Registration,2026-09-10 19:41,2026-09-11 08:40,2026-09-12 09:02,Resolved,13.0,37.4
+R0081,Tidewater Hoops,Voicemail,Uniforms,2026-09-10 10:29,2026-09-10 14:08,2026-09-11 13:35,Resolved,3.7,27.1
+R0082,Riverbend YSC,Team app,General question,2026-09-11 08:49,2026-09-11 11:40,2026-09-12 03:40,Resolved,2.9,18.9
+R0083,Riverbend YSC,Email,Complaint,2026-09-11 17:58,2026-09-12 08:49,2026-09-14 09:52,Resolved,14.9,63.9
+R0084,Riverbend YSC,Social DM,Sponsor,2026-09-11 08:44,2026-09-11 12:38,2026-09-11 20:53,Resolved,3.9,12.2
+R0085,Riverbend YSC,Email,Payment / refund,2026-09-11 19:02,2026-09-12 08:30,2026-09-13 10:19,Resolved,13.5,39.3
+R0086,Live Oak Baseball League,Team app,Registration,2026-09-11 20:31,2026-09-12 11:03,2026-09-13 11:28,Resolved,14.5,39.0
+R0087,Live Oak Baseball League,Email,Complaint,2026-09-11 18:33,2026-09-12 09:46,2026-09-12 20:27,Resolved,15.2,25.9
+R0088,Live Oak Baseball League,Voicemail,Payment / refund,2026-09-11 14:29,2026-09-11 17:31,2026-09-14 02:42,Resolved,3.0,60.2
+R0089,Live Oak Baseball League,Email,General question,2026-09-11 08:17,2026-09-11 08:27,2026-09-12 02:41,Resolved,0.2,18.4
+R0090,Marsh Hawks Lacrosse,Social DM,Registration,2026-09-11 09:31,2026-09-11 12:42,2026-09-11 14:13,Resolved,3.2,4.7
+R0091,Marsh Hawks Lacrosse,Team app,Registration,2026-09-11 11:35,2026-09-11 17:33,2026-09-13 02:44,Resolved,6.0,39.2
+R0092,Marsh Hawks Lacrosse,Phone,Uniforms,2026-09-11 19:15,2026-09-12 09:12,2026-09-13 10:39,Resolved,14.0,39.4
+R0093,Tidewater Hoops,Phone,Payment / refund,2026-09-11 18:15,2026-09-12 08:08,2026-09-13 19:36,Resolved,13.9,49.4
+R0094,Tidewater Hoops,Email,Schedule change,2026-09-11 13:47,2026-09-11 14:38,2026-09-12 08:04,Resolved,0.9,18.3
+R0095,Riverbend YSC,Voicemail,Complaint,2026-09-14 18:34,2026-09-15 08:19,2026-09-16 02:20,Resolved,13.8,31.8
+R0096,Riverbend YSC,Voicemail,Schedule change,2026-09-14 11:46,2026-09-14 14:52,2026-09-14 23:19,Resolved,3.1,11.6
+R0097,Harbor Point Volleyball,Email,Uniforms,2026-09-14 11:00,2026-09-14 15:18,2026-09-15 09:48,Resolved,4.3,22.8
+R0098,Live Oak Baseball League,Email,General question,2026-09-14 09:40,2026-09-14 13:59,2026-09-14 14:52,Resolved,4.3,5.2
+R0099,Live Oak Baseball League,Email,Registration,2026-09-14 14:21,2026-09-14 18:58,2026-09-15 03:12,Resolved,4.6,12.9
+R0100,Tidewater Hoops,Email,Registration,2026-09-14 17:43,2026-09-15 07:58,2026-09-15 08:48,Resolved,14.3,15.1
+R0101,Tidewater Hoops,Social DM,Schedule change,2026-09-14 19:26,2026-09-15 08:20,2026-09-17 16:31,Resolved,12.9,69.1
+R0102,Riverbend YSC,Email,Complaint,2026-09-15 20:37,2026-09-16 11:06,2026-09-17 21:43,Resolved,14.5,49.1
+R0103,Harbor Point Volleyball,Phone,Registration,2026-09-15 10:40,2026-09-15 13:00,2026-09-16 07:47,Resolved,2.3,21.1
+R0104,Live Oak Baseball League,Phone,Payment / refund,2026-09-15 07:26,2026-09-15 09:33,2026-09-17 01:22,Resolved,2.1,41.9
+R0105,Live Oak Baseball League,Voicemail,Payment / refund,2026-09-15 18:55,2026-09-16 11:36,2026-09-17 22:13,Resolved,16.7,51.3
+R0106,Live Oak Baseball League,Email,Registration,2026-09-15 10:27,2026-09-15 10:40,2026-09-16 07:11,Resolved,0.2,20.7
+R0107,Marsh Hawks Lacrosse,Phone,Sponsor,2026-09-15 07:10,2026-09-15 11:41,2026-09-16 01:52,Resolved,4.5,18.7
+R0108,Marsh Hawks Lacrosse,Email,Payment / refund,2026-09-15 14:44,2026-09-15 16:53,2026-09-17 16:09,Resolved,2.2,49.4
+R0109,Riverbend YSC,Email,Schedule change,2026-09-16 18:20,2026-09-17 07:14,2026-09-17 08:31,Resolved,12.9,14.2
+R0110,Live Oak Baseball League,Voicemail,Schedule change,2026-09-16 20:17,2026-09-17 09:59,2026-09-18 03:04,Resolved,13.7,30.8
+R0111,Live Oak Baseball League,Team app,Registration,2026-09-16 14:58,2026-09-16 15:50,2026-09-17 15:54,Resolved,0.9,24.9
+R0112,Live Oak Baseball League,Email,Payment / refund,2026-09-16 14:22,2026-09-16 17:48,2026-09-18 04:52,Resolved,3.4,38.5
+R0113,Live Oak Baseball League,Email,Uniforms,2026-09-16 14:18,2026-09-16 16:50,2026-09-17 03:00,Resolved,2.5,12.7
+R0114,Marsh Hawks Lacrosse,Social DM,General question,2026-09-16 19:25,2026-09-17 07:25,2026-09-18 04:22,Resolved,12.0,33.0
+R0115,Tidewater Hoops,Email,Schedule change,2026-09-16 15:23,2026-09-16 18:02,2026-09-17 03:46,Resolved,2.7,12.4
+R0116,Riverbend YSC,Team app,Payment / refund,2026-09-17 09:59,2026-09-17 12:00,2026-09-18 18:19,Resolved,2.0,32.3
+R0117,Riverbend YSC,Email,Uniforms,2026-09-17 19:15,2026-09-18 07:18,2026-09-18 12:56,Resolved,12.1,17.7
+R0118,Riverbend YSC,Phone,General question,2026-09-17 08:29,2026-09-17 11:45,2026-09-18 20:12,Resolved,3.3,35.7
+R0119,Harbor Point Volleyball,Email,Payment / refund,2026-09-17 18:17,2026-09-18 08:10,2026-09-19 06:37,Resolved,13.9,36.3
+R0120,Harbor Point Volleyball,Email,Uniforms,2026-09-17 16:32,2026-09-17 19:19,2026-09-19 07:08,Resolved,2.8,38.6
+R0121,Harbor Point Volleyball,Email,Sponsor,2026-09-17 12:59,2026-09-17 16:56,2026-09-19 05:28,Resolved,4.0,40.5
+R0122,Harbor Point Volleyball,Email,Schedule change,2026-09-17 16:42,2026-09-17 19:15,2026-09-17 20:44,Resolved,2.6,4.0
+R0123,Live Oak Baseball League,Email,Payment / refund,2026-09-17 15:24,2026-09-17 19:03,2026-09-19 21:07,Resolved,3.7,53.7
+R0124,Live Oak Baseball League,Email,Sponsor,2026-09-17 10:54,2026-09-17 13:17,2026-09-17 21:09,Resolved,2.4,10.3
+R0125,Tidewater Hoops,Email,Complaint,2026-09-17 20:41,2026-09-18 08:49,2026-09-18 20:08,Resolved,12.1,23.5
+R0126,Tidewater Hoops,Phone,Payment / refund,2026-09-17 20:54,2026-09-18 10:43,2026-09-19 16:27,Resolved,13.8,43.6
+R0127,Tidewater Hoops,Email,Schedule change,2026-09-17 13:55,2026-09-17 16:35,2026-09-18 13:38,Resolved,2.7,23.7
+R0128,Riverbend YSC,Social DM,General question,2026-09-18 20:21,2026-09-19 09:52,2026-09-19 14:51,Resolved,13.5,18.5
+R0129,Riverbend YSC,Social DM,Sponsor,2026-09-18 18:56,2026-09-19 07:04,2026-09-20 15:03,Resolved,12.1,44.1
+R0130,Harbor Point Volleyball,Team app,Registration,2026-09-18 10:47,2026-09-18 13:29,2026-09-18 21:16,Resolved,2.7,10.5
+R0131,Harbor Point Volleyball,Email,Payment / refund,2026-09-18 09:44,2026-09-18 11:55,2026-09-19 22:10,Resolved,2.2,36.4
+R0132,Live Oak Baseball League,Email,Uniforms,2026-09-18 13:36,2026-09-18 16:43,2026-09-19 15:26,Resolved,3.1,25.8
+R0133,Live Oak Baseball League,Phone,Schedule change,2026-09-18 17:15,2026-09-19 06:10,2026-09-20 13:17,Resolved,12.9,44.0
+R0134,Tidewater Hoops,Phone,General question,2026-09-18 19:29,2026-09-19 08:06,2026-09-19 10:04,Resolved,12.6,14.6
+R0135,Tidewater Hoops,Email,Uniforms,2026-09-18 17:27,2026-09-19 06:39,2026-09-20 01:16,Resolved,13.2,31.8
+R0136,Riverbend YSC,Email,Payment / refund,2026-09-21 13:36,2026-09-21 15:20,2026-09-22 20:25,Resolved,1.7,30.8
+R0137,Riverbend YSC,Social DM,Registration,2026-09-21 13:17,2026-09-21 15:22,2026-09-22 12:03,Resolved,2.1,22.8
+R0138,Riverbend YSC,Team app,General question,2026-09-21 18:31,2026-09-22 09:37,2026-09-23 08:46,Resolved,15.1,38.3
+R0139,Harbor Point Volleyball,Voicemail,Registration,2026-09-21 10:39,2026-09-21 12:49,2026-09-22 05:08,Resolved,2.2,18.5
+R0140,Harbor Point Volleyball,Email,Schedule change,2026-09-21 08:57,2026-09-21 09:27,2026-09-22 00:19,Resolved,0.5,15.4
+R0141,Live Oak Baseball League,Email,General question,2026-09-21 09:05,2026-09-21 10:25,2026-09-22 05:10,Resolved,1.3,20.1
+R0142,Live Oak Baseball League,Email,Schedule change,2026-09-21 12:33,2026-09-21 17:18,2026-09-23 09:58,Resolved,4.8,45.4
+R0143,Marsh Hawks Lacrosse,Email,General question,2026-09-21 20:21,2026-09-22 08:39,2026-09-22 20:16,Resolved,12.3,23.9
+R0144,Marsh Hawks Lacrosse,Phone,Uniforms,2026-09-21 10:55,2026-09-21 11:30,2026-09-22 17:46,Resolved,0.6,30.9
+R0145,Tidewater Hoops,Email,Registration,2026-09-21 11:34,2026-09-21 15:08,2026-09-22 05:04,Resolved,3.6,17.5
+R0146,Tidewater Hoops,Email,Registration,2026-09-21 17:23,2026-09-22 05:29,2026-09-22 08:34,Resolved,12.1,15.2
+R0147,Live Oak Baseball League,Email,General question,2026-09-22 20:29,2026-09-23 10:06,2026-09-24 05:05,Resolved,13.6,32.6
+R0148,Live Oak Baseball League,Email,Complaint,2026-09-22 07:19,2026-09-22 10:03,2026-09-24 09:21,Resolved,2.7,50.0
+R0149,Tidewater Hoops,Voicemail,Payment / refund,2026-09-22 18:34,2026-09-23 08:11,2026-09-24 08:41,Resolved,13.6,38.1
+R0150,Tidewater Hoops,Email,Registration,2026-09-22 13:17,2026-09-22 16:14,2026-09-23 10:25,Resolved,3.0,21.1
+R0151,Tidewater Hoops,Team app,Payment / refund,2026-09-22 08:43,2026-09-22 12:55,2026-09-23 15:53,Resolved,4.2,31.2
+R0152,Tidewater Hoops,Email,General question,2026-09-22 08:54,2026-09-22 10:50,2026-09-23 05:33,Resolved,1.9,20.7
+R0153,Riverbend YSC,Team app,Payment / refund,2026-09-23 07:50,2026-09-23 10:38,2026-09-24 07:24,Resolved,2.8,23.6
+R0154,Riverbend YSC,Social DM,Schedule change,2026-09-23 15:13,2026-09-23 18:05,2026-09-25 08:06,Resolved,2.9,40.9
+R0155,Riverbend YSC,Team app,Registration,2026-09-23 16:00,2026-09-23 20:59,2026-09-24 09:37,Resolved,5.0,17.6
+R0156,Riverbend YSC,Email,General question,2026-09-23 08:42,2026-09-23 08:58,2026-09-24 18:10,Resolved,0.3,33.5
+R0157,Harbor Point Volleyball,Email,Payment / refund,2026-09-23 09:47,2026-09-23 12:26,2026-09-25 08:30,Resolved,2.7,46.7
+R0158,Harbor Point Volleyball,Email,Payment / refund,2026-09-23 16:06,2026-09-23 19:26,2026-09-24 08:31,Resolved,3.3,16.4
+R0159,Live Oak Baseball League,Phone,Payment / refund,2026-09-23 17:33,2026-09-24 05:40,2026-09-26 14:48,Resolved,12.1,69.3
+R0160,Marsh Hawks Lacrosse,Email,Uniforms,2026-09-23 08:31,2026-09-23 12:26,2026-09-23 19:08,Resolved,3.9,10.6
+R0161,Tidewater Hoops,Email,Uniforms,2026-09-23 16:35,2026-09-23 21:04,2026-09-24 01:29,Resolved,4.5,8.9
+R0162,Tidewater Hoops,Email,Sponsor,2026-09-23 13:06,2026-09-23 14:38,2026-09-23 16:48,Resolved,1.5,3.7
+R0163,Tidewater Hoops,Team app,Payment / refund,2026-09-23 20:13,2026-09-24 09:52,2026-09-24 16:09,Resolved,13.7,19.9
+R0164,Riverbend YSC,Email,Payment / refund,2026-09-24 12:27,2026-09-24 16:52,2026-09-26 19:18,Resolved,4.4,54.9
+R0165,Harbor Point Volleyball,Email,Registration,2026-09-24 08:53,2026-09-24 11:19,2026-09-24 11:48,Resolved,2.4,2.9
+R0166,Live Oak Baseball League,Email,Uniforms,2026-09-24 15:21,2026-09-24 19:41,2026-09-26 09:02,Resolved,4.3,41.7
+R0167,Live Oak Baseball League,Phone,Complaint,2026-09-24 18:03,2026-09-25 07:27,2026-09-25 13:41,Resolved,13.4,19.6
+R0168,Live Oak Baseball League,Email,Schedule change,2026-09-24 10:09,2026-09-24 15:39,2026-09-25 22:39,Resolved,5.5,36.5
+R0169,Live Oak Baseball League,Social DM,Schedule change,2026-09-24 19:17,2026-09-25 10:39,2026-09-27 02:11,Resolved,15.4,54.9
+R0170,Live Oak Baseball League,Team app,Registration,2026-09-24 17:35,2026-09-25 08:54,2026-09-25 18:46,Resolved,15.3,25.2
+R0171,Marsh Hawks Lacrosse,Email,Payment / refund,2026-09-24 11:58,2026-09-24 17:17,2026-09-26 11:39,Resolved,5.3,47.7
+R0172,Marsh Hawks Lacrosse,Email,Schedule change,2026-09-24 09:47,2026-09-24 10:23,2026-09-25 00:09,Resolved,0.6,14.4
+R0173,Tidewater Hoops,Voicemail,Payment / refund,2026-09-24 12:10,2026-09-24 16:06,2026-09-25 04:13,Resolved,3.9,16.1
+R0174,Riverbend YSC,Email,Uniforms,2026-09-25 16:03,2026-09-25 18:55,2026-09-26 00:26,Resolved,2.9,8.4
+R0175,Riverbend YSC,Email,Sponsor,2026-09-25 11:13,2026-09-25 11:45,2026-09-25 15:25,Resolved,0.5,4.2
+R0176,Riverbend YSC,Email,Uniforms,2026-09-25 14:33,2026-09-25 17:44,,Open,3.2,
+R0177,Harbor Point Volleyball,Voicemail,Sponsor,2026-09-25 11:13,2026-09-25 14:28,2026-09-26 11:19,Resolved,3.3,24.1
+R0178,Harbor Point Volleyball,Phone,Registration,2026-09-25 13:11,2026-09-25 16:00,2026-09-26 23:46,Resolved,2.8,34.6
+R0179,Live Oak Baseball League,Email,Payment / refund,2026-09-25 18:02,2026-09-26 06:20,2026-09-27 23:31,Resolved,12.3,53.5
+R0180,Live Oak Baseball League,Phone,Payment / refund,2026-09-25 13:36,2026-09-25 15:35,2026-09-27 11:25,Resolved,2.0,45.8
+R0181,Marsh Hawks Lacrosse,Email,Uniforms,2026-09-25 14:53,2026-09-25 21:40,2026-09-26 05:33,Resolved,6.8,14.7
+R0182,Marsh Hawks Lacrosse,Social DM,Registration,2026-09-25 13:33,2026-09-25 16:24,2026-09-26 06:09,Resolved,2.9,16.6
+R0183,Tidewater Hoops,Phone,Schedule change,2026-09-25 08:32,2026-09-25 12:13,2026-09-27 00:57,Resolved,3.7,40.4
+R0184,Riverbend YSC,Email,Registration,2026-09-28 09:15,2026-09-28 11:00,2026-09-29 04:43,Resolved,1.8,19.5
+R0185,Riverbend YSC,Phone,Complaint,2026-09-28 08:11,2026-09-28 11:42,2026-09-29 00:07,Resolved,3.5,15.9
+R0186,Riverbend YSC,Phone,General question,2026-09-28 17:59,2026-09-29 09:55,2026-09-30 03:58,Resolved,15.9,34.0
+R0187,Riverbend YSC,Email,Registration,2026-09-28 17:20,2026-09-29 07:06,2026-09-29 17:26,Resolved,13.8,24.1
+R0188,Harbor Point Volleyball,Email,Payment / refund,2026-09-28 15:04,2026-09-28 21:06,2026-09-30 12:21,Resolved,6.0,45.3
+R0189,Harbor Point Volleyball,Phone,Registration,2026-09-28 20:54,2026-09-29 10:26,2026-09-30 02:52,Resolved,13.5,30.0
+R0190,Live Oak Baseball League,Phone,General question,2026-09-28 07:28,2026-09-28 10:59,2026-09-29 18:39,Resolved,3.5,35.2
+R0191,Marsh Hawks Lacrosse,Team app,General question,2026-09-28 19:57,2026-09-29 08:17,2026-09-29 18:15,Resolved,12.3,22.3
+R0192,Marsh Hawks Lacrosse,Team app,Uniforms,2026-09-28 07:15,2026-09-28 07:27,2026-09-28 18:34,Resolved,0.2,11.3
+R0193,Tidewater Hoops,Email,Uniforms,2026-09-28 19:21,2026-09-29 09:52,2026-09-29 17:02,Resolved,14.5,21.7
+R0194,Tidewater Hoops,Email,Schedule change,2026-09-28 12:06,2026-09-28 14:33,2026-09-30 07:53,Resolved,2.5,43.8
+R0195,Tidewater Hoops,Email,Registration,2026-09-28 16:55,2026-09-28 17:06,2026-09-29 05:50,Resolved,0.2,12.9
+R0196,Riverbend YSC,Email,Uniforms,2026-09-29 09:38,2026-09-29 09:41,2026-09-29 14:25,Resolved,0.1,4.8
+R0197,Riverbend YSC,Team app,Uniforms,2026-09-29 09:42,2026-09-29 11:09,2026-10-01 08:03,Resolved,1.5,46.4
+R0198,Harbor Point Volleyball,Email,Schedule change,2026-09-29 17:27,2026-09-30 06:41,2026-10-01 08:53,Resolved,13.2,39.4
+R0199,Live Oak Baseball League,Email,Complaint,2026-09-29 10:14,2026-09-29 11:44,2026-10-01 17:22,Resolved,1.5,55.1
+R0200,Live Oak Baseball League,Phone,Uniforms,2026-09-29 15:53,2026-09-29 16:14,2026-09-30 02:35,Resolved,0.4,10.7
+R0201,Tidewater Hoops,Phone,Uniforms,2026-09-29 09:53,2026-09-29 15:00,2026-09-29 16:09,Resolved,5.1,6.3
+R0202,Riverbend YSC,Voicemail,Payment / refund,2026-09-30 14:39,2026-09-30 20:33,2026-10-01 10:08,Resolved,5.9,19.5
+R0203,Harbor Point Volleyball,Social DM,Schedule change,2026-09-30 19:50,2026-10-01 09:18,2026-10-03 13:29,Resolved,13.5,65.7
+R0204,Harbor Point Volleyball,Phone,Payment / refund,2026-09-30 11:49,2026-09-30 12:26,2026-10-02 19:39,Resolved,0.6,55.8
+R0205,Live Oak Baseball League,Phone,Registration,2026-09-30 09:55,2026-09-30 14:12,2026-09-30 15:32,Resolved,4.3,5.6
+R0206,Live Oak Baseball League,Email,General question,2026-09-30 20:33,2026-10-01 11:36,2026-10-01 21:15,Resolved,15.1,24.7
+R0207,Marsh Hawks Lacrosse,Email,General question,2026-09-30 13:05,2026-09-30 13:48,2026-10-01 07:44,Resolved,0.7,18.7
+R0208,Marsh Hawks Lacrosse,Email,Schedule change,2026-09-30 07:25,2026-09-30 11:51,2026-10-01 01:23,Resolved,4.4,18.0
+R0209,Marsh Hawks Lacrosse,Email,Uniforms,2026-09-30 08:53,2026-09-30 11:43,2026-10-01 04:49,Resolved,2.8,19.9
+R0210,Riverbend YSC,Phone,Schedule change,2026-10-01 19:45,2026-10-02 11:22,2026-10-03 11:03,Resolved,15.6,39.3
+R0211,Riverbend YSC,Email,Schedule change,2026-10-01 18:38,2026-10-02 07:47,2026-10-02 22:56,Resolved,13.2,28.3
+R0212,Riverbend YSC,Social DM,Payment / refund,2026-10-01 07:15,2026-10-01 08:48,2026-10-02 16:37,Resolved,1.6,33.4
+R0213,Harbor Point Volleyball,Email,Registration,2026-10-01 15:36,2026-10-01 17:53,2026-10-01 21:21,Resolved,2.3,5.8
+R0214,Live Oak Baseball League,Email,Uniforms,2026-10-01 13:11,2026-10-01 16:25,2026-10-02 05:35,Resolved,3.2,16.4
+R0215,Live Oak Baseball League,Phone,Complaint,2026-10-01 15:50,2026-10-01 16:35,2026-10-03 08:36,Resolved,0.8,40.8
+R0216,Live Oak Baseball League,Email,Uniforms,2026-10-01 12:16,2026-10-01 16:07,2026-10-02 10:24,Resolved,3.9,22.1
+R0217,Marsh Hawks Lacrosse,Email,Registration,2026-10-01 19:21,2026-10-02 08:42,2026-10-03 09:54,Resolved,13.4,38.6
+R0218,Marsh Hawks Lacrosse,Team app,Uniforms,2026-10-01 20:49,2026-10-02 10:43,2026-10-03 03:50,Resolved,13.9,31.0
+R0219,Tidewater Hoops,Email,Payment / refund,2026-10-01 14:02,2026-10-01 16:42,2026-10-03 02:36,Resolved,2.7,36.6
+R0220,Tidewater Hoops,Phone,Complaint,2026-10-01 15:25,2026-10-01 17:50,2026-10-03 23:15,Resolved,2.4,55.8
+R0221,Riverbend YSC,Email,Payment / refund,2026-10-02 20:41,2026-10-03 10:09,2026-10-05 11:14,Resolved,13.5,62.6
+R0222,Harbor Point Volleyball,Email,Complaint,2026-10-02 13:21,2026-10-02 15:05,2026-10-02 16:53,Resolved,1.7,3.5
+R0223,Live Oak Baseball League,Email,Uniforms,2026-10-02 19:05,2026-10-03 09:29,2026-10-04 07:12,Resolved,14.4,36.1
+R0224,Live Oak Baseball League,Email,Uniforms,2026-10-02 08:20,2026-10-02 08:34,2026-10-02 10:47,Resolved,0.2,2.5
+R0225,Tidewater Hoops,Team app,Payment / refund,2026-10-02 20:58,2026-10-03 10:03,2026-10-04 19:22,Resolved,13.1,46.4
+R0226,Riverbend YSC,Social DM,Payment / refund,2026-10-05 17:25,2026-10-06 08:08,2026-10-07 12:21,Resolved,14.7,42.9
+R0227,Riverbend YSC,Social DM,Schedule change,2026-10-05 09:54,2026-10-05 13:07,2026-10-06 04:15,Resolved,3.2,18.4
+R0228,Riverbend YSC,Phone,Payment / refund,2026-10-05 12:23,2026-10-05 12:30,2026-10-06 05:33,Resolved,0.1,17.2
+R0229,Live Oak Baseball League,Email,Schedule change,2026-10-05 16:08,2026-10-05 17:44,2026-10-05 23:10,Resolved,1.6,7.0
+R0230,Live Oak Baseball League,Email,Schedule change,2026-10-05 18:11,2026-10-06 08:25,2026-10-06 21:37,Resolved,14.2,27.4
+R0231,Live Oak Baseball League,Team app,Uniforms,2026-10-05 16:18,2026-10-05 20:20,2026-10-06 12:40,Resolved,4.0,20.4
+R0232,Live Oak Baseball League,Team app,Uniforms,2026-10-05 09:57,2026-10-05 13:28,2026-10-06 17:04,Resolved,3.5,31.1
+R0233,Tidewater Hoops,Email,Payment / refund,2026-10-05 15:34,2026-10-05 15:48,2026-10-07 09:53,Resolved,0.2,42.3
+R0234,Riverbend YSC,Email,Payment / refund,2026-10-06 09:50,2026-10-06 15:51,2026-10-07 19:32,Resolved,6.0,33.7
+R0235,Riverbend YSC,Phone,Payment / refund,2026-10-06 14:01,2026-10-06 17:06,2026-10-08 07:14,Resolved,3.1,41.2
+R0236,Riverbend YSC,Team app,Payment / refund,2026-10-06 08:04,2026-10-06 10:05,2026-10-06 23:19,Resolved,2.0,15.3
+R0237,Riverbend YSC,Team app,Registration,2026-10-06 20:36,2026-10-07 11:10,2026-10-07 17:16,Resolved,14.6,20.7
+R0238,Harbor Point Volleyball,Phone,Schedule change,2026-10-06 20:49,2026-10-07 11:53,2026-10-08 13:17,Resolved,15.1,40.5
+R0239,Harbor Point Volleyball,Email,Schedule change,2026-10-06 20:07,2026-10-07 08:45,2026-10-08 10:45,Resolved,12.6,38.6
+R0240,Live Oak Baseball League,Email,Payment / refund,2026-10-06 15:57,2026-10-06 23:14,2026-10-08 16:50,Resolved,7.3,48.9
+R0241,Live Oak Baseball League,Email,Schedule change,2026-10-06 17:19,2026-10-07 07:52,2026-10-09 06:56,Resolved,14.6,61.6
+R0242,Live Oak Baseball League,Phone,Registration,2026-10-06 16:09,2026-10-06 20:07,2026-10-07 02:47,Resolved,4.0,10.6
+R0243,Marsh Hawks Lacrosse,Voicemail,General question,2026-10-06 08:02,2026-10-06 12:33,2026-10-07 01:40,Resolved,4.5,17.6
+R0244,Marsh Hawks Lacrosse,Team app,Registration,2026-10-06 16:40,2026-10-06 20:32,2026-10-07 01:47,Resolved,3.9,9.1
+R0245,Marsh Hawks Lacrosse,Email,General question,2026-10-06 10:51,2026-10-06 12:32,2026-10-06 19:01,Resolved,1.7,8.2
+R0246,Tidewater Hoops,Email,Schedule change,2026-10-06 13:30,2026-10-06 18:27,2026-10-08 06:18,Resolved,5.0,40.8
+R0247,Tidewater Hoops,Email,Complaint,2026-10-06 20:22,2026-10-07 09:50,2026-10-08 04:29,Resolved,13.5,32.1
+R0248,Riverbend YSC,Email,Registration,2026-10-07 11:28,2026-10-07 13:28,2026-10-08 16:49,Resolved,2.0,29.4
+R0249,Riverbend YSC,Social DM,General question,2026-10-07 10:55,2026-10-07 16:20,2026-10-07 21:17,Resolved,5.4,10.4
+R0250,Harbor Point Volleyball,Email,General question,2026-10-07 14:31,2026-10-07 22:36,2026-10-09 00:25,Resolved,8.1,33.9
+R0251,Harbor Point Volleyball,Email,Schedule change,2026-10-07 10:13,2026-10-07 13:47,2026-10-08 00:05,Resolved,3.6,13.9
+R0252,Harbor Point Volleyball,Email,Payment / refund,2026-10-07 17:30,2026-10-08 05:55,2026-10-10 06:27,Resolved,12.4,61.0
+R0253,Live Oak Baseball League,Email,Registration,2026-10-07 13:23,2026-10-07 17:47,2026-10-07 19:29,Resolved,4.4,6.1
+R0254,Live Oak Baseball League,Phone,Payment / refund,2026-10-07 13:32,2026-10-07 15:18,2026-10-09 06:13,Resolved,1.8,40.7
+R0255,Tidewater Hoops,Phone,Complaint,2026-10-07 12:50,2026-10-07 15:59,2026-10-08 16:47,Resolved,3.2,28.0
+R0256,Tidewater Hoops,Email,Registration,2026-10-07 13:32,2026-10-07 16:52,2026-10-08 01:08,Resolved,3.3,11.6
+R0257,Harbor Point Volleyball,Email,General question,2026-10-08 09:20,2026-10-08 15:14,2026-10-08 16:24,Resolved,5.9,7.1
+R0258,Harbor Point Volleyball,Phone,Schedule change,2026-10-08 16:21,2026-10-08 20:34,2026-10-09 00:33,Resolved,4.2,8.2
+R0259,Harbor Point Volleyball,Email,Payment / refund,2026-10-08 07:23,2026-10-08 10:02,2026-10-09 05:39,Resolved,2.7,22.3
+R0260,Live Oak Baseball League,Phone,Schedule change,2026-10-08 20:44,2026-10-09 09:47,2026-10-09 16:43,Resolved,13.1,20.0
+R0261,Live Oak Baseball League,Email,Registration,2026-10-08 10:46,2026-10-08 12:42,2026-10-08 20:49,Resolved,1.9,10.1
+R0262,Live Oak Baseball League,Email,General question,2026-10-08 13:09,2026-10-08 15:09,2026-10-08 20:41,Resolved,2.0,7.5
+R0263,Riverbend YSC,Phone,Registration,2026-10-09 13:44,2026-10-09 14:30,2026-10-09 18:18,Resolved,0.8,4.6
+R0264,Riverbend YSC,Phone,Uniforms,2026-10-09 18:03,2026-10-10 08:17,2026-10-11 14:15,Resolved,14.2,44.2
+R0265,Riverbend YSC,Email,General question,2026-10-09 09:29,2026-10-09 11:57,2026-10-09 12:37,Resolved,2.5,3.1
+R0266,Harbor Point Volleyball,Phone,Uniforms,2026-10-09 17:51,2026-10-10 06:37,2026-10-10 21:00,Resolved,12.8,27.2
+R0267,Harbor Point Volleyball,Email,Payment / refund,2026-10-09 11:49,2026-10-09 16:52,2026-10-10 19:27,Resolved,5.1,31.6
+R0268,Harbor Point Volleyball,Email,Registration,2026-10-09 19:46,2026-10-10 10:28,2026-10-10 12:43,Resolved,14.7,17.0
+R0269,Live Oak Baseball League,Email,Registration,2026-10-09 19:51,2026-10-10 11:40,2026-10-10 22:27,Resolved,15.8,26.6
+R0270,Live Oak Baseball League,Email,Registration,2026-10-09 14:41,2026-10-09 17:55,2026-10-11 00:32,Resolved,3.2,33.9
+R0271,Live Oak Baseball League,Phone,Registration,2026-10-09 18:17,2026-10-10 08:37,2026-10-10 23:37,Resolved,14.3,29.3
+R0272,Live Oak Baseball League,Email,Registration,2026-10-09 17:14,2026-10-10 08:06,2026-10-11 18:55,Resolved,14.9,49.7
+R0273,Live Oak Baseball League,Phone,Registration,2026-10-09 19:08,2026-10-10 10:50,2026-10-11 00:08,Resolved,15.7,29.0
+R0274,Marsh Hawks Lacrosse,Team app,Registration,2026-10-09 14:41,2026-10-09 15:56,2026-10-11 00:07,Resolved,1.3,33.4
+R0275,Marsh Hawks Lacrosse,Phone,Schedule change,2026-10-09 08:41,2026-10-09 10:23,2026-10-10 04:48,Resolved,1.7,20.1
+R0276,Tidewater Hoops,Team app,General question,2026-10-09 09:59,2026-10-09 16:10,2026-10-09 17:06,Resolved,6.2,7.1
+R0277,Tidewater Hoops,Email,Payment / refund,2026-10-09 20:59,2026-10-10 10:10,2026-10-12 02:02,Resolved,13.2,53.1
+R0278,Tidewater Hoops,Phone,Payment / refund,2026-10-09 12:18,2026-10-09 13:56,2026-10-10 15:28,Resolved,1.6,27.2
+R0279,Riverbend YSC,Voicemail,Payment / refund,2026-10-12 19:07,2026-10-13 10:42,,Open,15.6,
+R0280,Riverbend YSC,Email,Registration,2026-10-12 18:11,2026-10-13 07:21,,Open,13.2,
+R0281,Harbor Point Volleyball,Email,Schedule change,2026-10-12 16:54,2026-10-12 17:47,2026-10-13 13:16,Resolved,0.9,20.4
+R0282,Live Oak Baseball League,Email,General question,2026-10-12 14:20,2026-10-12 20:01,2026-10-12 22:41,Resolved,5.7,8.4
+R0283,Live Oak Baseball League,Phone,Schedule change,2026-10-12 12:19,2026-10-12 16:16,2026-10-13 05:18,Resolved,4.0,17.0
+R0284,Live Oak Baseball League,Email,Schedule change,2026-10-12 17:07,2026-10-13 07:51,,Open,14.7,
+R0285,Live Oak Baseball League,Email,Payment / refund,2026-10-12 18:49,2026-10-13 10:28,,Open,15.7,
+R0286,Live Oak Baseball League,Email,Schedule change,2026-10-12 10:08,2026-10-12 15:17,,Open,5.2,
+R0287,Marsh Hawks Lacrosse,Voicemail,General question,2026-10-12 18:35,2026-10-13 10:47,,Open,16.2,
+R0288,Riverbend YSC,Email,Schedule change,2026-10-13 15:28,2026-10-13 15:31,,Open,0.1,
+R0289,Live Oak Baseball League,Social DM,Registration,2026-10-13 15:09,2026-10-13 16:52,,Open,1.7,
+R0290,Live Oak Baseball League,Email,General question,2026-10-13 14:05,,,Open,,
+R0291,Marsh Hawks Lacrosse,Phone,Schedule change,2026-10-13 13:29,2026-10-13 15:10,,Open,1.7,
+R0292,Tidewater Hoops,Email,Registration,2026-10-13 07:47,2026-10-13 10:29,2026-10-13 15:46,Resolved,2.7,8.0
+R0293,Tidewater Hoops,Team app,General question,2026-10-13 07:59,2026-10-13 11:54,2026-10-13 14:34,Resolved,3.9,6.6
